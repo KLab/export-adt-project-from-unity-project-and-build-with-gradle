@@ -27,7 +27,7 @@ namespace GradleTest
             PlayerSettings.Android.bundleVersionCode = 1;
             PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel22;
 
-            var errorMessage = BuildPipeline.BuildPlayer(scenes, "gradle-test", BuildTarget.Android, options);
+            var errorMessage = BuildPipeline.BuildPlayer(scenes, "build-adt", BuildTarget.Android, options);
             if (string.IsNullOrEmpty(errorMessage))
             {
                 Debug.Log("Build Success");
