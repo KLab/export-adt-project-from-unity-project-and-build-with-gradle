@@ -4,6 +4,6 @@
 
 prod_name=$(ls -1 build-adt)
 
-rsync -avr -delete gradle/ "build-adt/$prod_name/"
+ln -sFv "$(pwd)/gradle/"* "build-adt/$prod_name"
 
 echo SUCCESS
