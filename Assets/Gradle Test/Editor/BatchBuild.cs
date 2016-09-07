@@ -17,7 +17,7 @@ namespace GradleTest
             var options = BuildOptions.SymlinkLibraries
                           | BuildOptions.Development
                           | BuildOptions.AllowDebugging
-                          | BuildOptions.AcceptExternalModificationsToPlayer;
+                          | BuildOptions.AcceptExternalModificationsToPlayer; // このオプションでプラットフォームのプロジェクトが生成される
 
             var scenes = EditorBuildSettings.scenes.Where(s => s.enabled).ToArray();
 
