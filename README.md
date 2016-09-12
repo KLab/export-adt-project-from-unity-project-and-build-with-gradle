@@ -59,13 +59,13 @@ $ cd build-adt/PROD_NAME
 $ ./gradlew build
 ```
 
-生成された APK は _build/outputs/apk_ 以下にあります。
+生成された APK は _build/outputs/apk_ 以下にある。
 
-_./make-gradle-buildable.bash_ と _./gradlew build_ の実行は、Unity の post process build にしてしまうのもありだと思います。
+_./make-gradle-buildable.bash_ と _./gradlew build_ の実行は、Unity の post process build にしてしまうのもありだと思う。
 
 ### CI
 
-Jenkins に設定する場合は、ジョブの「設定」で通常の Unity のビルドのように「ビルド」に「Invoke Unity3d Edior」で上記 1 を設定し、「シェルの実行」に下記のスクリプトで 2・3 を設定すればよいでしょう。
+Jenkins に設定する場合は、ジョブの「設定」で通常の Unity のビルドのように「ビルド」に「Invoke Unity3d Edior」で上記 1 を設定し、「シェルの実行」に下記のスクリプトで 2・3 を設定すればよい。
 
 ```
 ./make-gradle-buildable.bash
