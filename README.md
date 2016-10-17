@@ -16,21 +16,21 @@ Android のビルド時に指定するバージョンの意味については下
 - Unity のプロジェクト
   - バッチモードで Android プロジェクトが生成できるスクリプト
     - このプロジェクトでは `void GradleTest.BatchBuild.Build()`
-- _make-gradle-buildable.bash_
-- _gradle_ ディレクトリー
-  - _build.gradle_ は記載してある各バージョンを必要に応じて書き換えること
+- [_make-gradle-buildable.bash_](https://github.jp.klab.com/bismarck/export-adt-project-from-unity-project-and-build-with-gradle/blob/master/make-gradle-buildable.bash)
+- [_gradle_](https://github.jp.klab.com/bismarck/export-adt-project-from-unity-project-and-build-with-gradle/tree/master/gradle) ディレクトリー
+  - [_build.gradle_](https://github.jp.klab.com/bismarck/export-adt-project-from-unity-project-and-build-with-gradle/blob/master/gradle/build.gradle) は記載してある各バージョンを必要に応じて書き換えること
 
 ## やっていること
 
-1. Unity から ADT 形式の Android プロジェクトを _build-adt_ に出力する。
-1. _gradle_ ディレクトリーに用意した Gradle 関連のファイルを _build-adt_ 以下にリンクする。
+1. Unity から ADT 形式の Android プロジェクトを _build-adt_ ディレクトリーに出力する。
+1. _gradle_ ディレクトリーに用意した Gradle 関連のファイルを _build-adt_ ディレクトリー以下にリンクする。
 1. Gradle を使って Android プロジェクトをビルドする。
 
 ## ソース説明
 
-バッチモードで Android プロジェクトを生成するには、`BuildOptions.AcceptExternalModificationsToPlayer` を指定して `string BuildPipeline.BuildPlayer(string[], string, BuildTarget, BuildOptions)` を呼ぶ。後で使うスクリプトにハードコードされているので、出力ディレクトリー名を _build-adt_ にするために、これを `BuildPlayer` 関数の第2引数に指定する。
+バッチモードで Android プロジェクトを生成するには、`BuildOptions.AcceptExternalModificationsToPlayer` を指定して `string BuildPipeline.BuildPlayer(string[], string, BuildTarget, BuildOptions)` を呼ぶ。第2引数は `"build-adt"` を指定する。これは、後で使うスクリプトにハードコードされているため。
 
-_make-gradle-buildable.bash_ で、_gradle_ ディレクトリーに用意した Gradle 関連のファイルを _build-adt_ 以下にリンクしている。
+_make-gradle-buildable.bash_ で、_gradle_ ディレクトリーに用意した Gradle 関連のファイルを _build-adt_ ディレクトリー以下にリンクしている。
 
 _build.gradle_ は ADT の構成のディレクトリーを対象とするために、`android.sourceSets` で各ディレクトリーを指定している。その他は一般の Android の Gradle ファイルと同じ。
 
@@ -52,10 +52,10 @@ $ /Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -quit -executeMe
 
 ### 3. Gradle でビルドする
 
-カレントディレクトリーを _build-adt/PROD_NAME_ にして _./gradlew build_ コマンドでビルドする。`PROD_NAME` はこのプロジェクトでは `Gradle Test`。
+カレントディレクトリーを _build-adt/$PROD_NAME_ にして _./gradlew build_ コマンドでビルドする。`$PROD_NAME` はこのプロジェクトでは `Gradle Test`。
 
 ```
-$ cd build-adt/PROD_NAME
+$ cd build-adt/$PROD_NAME
 $ ./gradlew build
 ```
 
