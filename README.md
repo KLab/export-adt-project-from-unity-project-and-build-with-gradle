@@ -9,7 +9,7 @@ Unity に設定項目のない Android ビルド時のパラメーターが指�
 
 Android のビルド時に指定するバージョンの意味については下記を参考にしてください。
 
-- [Android SDK に関する情報](https://github.jp.klab.com/studio-management/bismarck-tools/wiki/Android-SDK-%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%83%85%E5%A0%B1)
+- [Android SDK に関する情報](https://sites.google.com/a/klab.com/techinfo/native/android/android-versions)
 
 ## 用意するもの
 
