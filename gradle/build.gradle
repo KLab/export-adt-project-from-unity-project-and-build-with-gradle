@@ -1,4 +1,4 @@
-// ビルドで指定する各バージョンの意味についてはこちら https://github.jp.klab.com/studio-management/bismarck-tools/wiki/Android-SDK-%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%83%85%E5%A0%B1#android-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E3%83%93%E3%83%AB%E3%83%89%E6%99%82%E3%81%AB%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+// ビルドで指定する各バージョンの意味についてはこちら https://sites.google.com/a/klab.com/techinfo/native/android/android-versions
 
 buildscript {
     repositories {
