@@ -55,7 +55,7 @@ $ /Applications/Unity/Unity.app/Contents/MacOS/Unity -batchmode -quit -executeMe
 カレントディレクトリーを _build-adt/$PROD_NAME_ にして _./gradlew build_ コマンドでビルドする。`$PROD_NAME` はこのプロジェクトでは `Gradle Test`。
 
 ```
-$ cd build-adt/$PROD_NAME
+$ cd "build-adt/$PROD_NAME"
 $ ./gradlew build
 ```
 
@@ -69,7 +69,7 @@ Jenkins に設定する場合は、ジョブの「設定」で通常の Unity �
 
 ```
 ./make-gradle-buildable.bash
-pushd build-adt/PROD_NAME
+pushd "build-adt/$(ls -1 build-adt)"
   ./gradlew build
 popd
 ```

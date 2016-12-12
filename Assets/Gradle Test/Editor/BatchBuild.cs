@@ -38,16 +38,10 @@ namespace GradleTest
             return 1;
         }
 
-        [MenuItem("Gradle Test/Export Android Project")]
-        public static void BuildMenu()
+        [MenuItem("File/Export Android Project #%a")]
+        public static void MenuBuild()
         {
             DoBuild();
-        }
-
-        [MenuItem("Gradle Test/Log Android SDK Path")]
-        public static void LogAndroidSdkPathMenu()
-        {
-            Debug.Log("Android SDK Path: " + EditorPrefs.GetString("AndroidSdkRoot"));
         }
     }
 }
