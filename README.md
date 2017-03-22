@@ -9,7 +9,7 @@ Unity に設定項目のない Android ビルド時のパラメーターが指�
 
 Android のビルド時に指定するバージョンの意味については下記を参考にしてください。
 
-- [Android SDK に関する情報](https://sites.google.com/a/klab.com/techinfo/native/android/android-versions)
+- [Android SDK に関する情報](http://klabgames.tech.blog.jp.klab.com/archives/1063074412.html)
 
 *Unity 5.5 からは Unity から直接 Gradle プロジェクトが生成できるようになりました。このツールは Unity 5.5 以降の Gradle プロジェクトの生成には対応していません。*
 
