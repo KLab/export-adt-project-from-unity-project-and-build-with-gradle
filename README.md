@@ -11,6 +11,8 @@ Android のビルド時に指定するバージョンの意味については下
 
 - [Android SDK に関する情報](https://sites.google.com/a/klab.com/techinfo/native/android/android-versions)
 
+*Unity 5.5 からは Unity から直接 Gradle プロジェクトが生成できるようになりました。このツールは Unity 5.5 以降の Gradle プロジェクトの生成には対応していません。*
+
 ## 用意するもの
 
 - Unity のプロジェクト
